@@ -1,0 +1,51 @@
+<a href="#/">Back</a>
+<div class="row panel">
+  <div class="col-md-2 col-xs-12" style="text-align: center;">
+     <img src="{{userinfo.avatar_url}}" class="img-thumbnail picture" />
+  </div>
+  <div class="col-md-9  col-xs-12">
+    <div class="header">
+      <h1>{{userinfo.name}}</h1>
+      <h4>{{userinfo.bio}}</h4>
+      
+     </div>
+  </div>
+</div>   
+
+<div class="row nav">    
+    <div class="col-md-4"></div>
+    <div class="col-md- col-xs-12" style="margin: 0px;padding: 0px;">
+        <div class="col-md-4 col-xs-4 well">{{userinfo.followers + " Followers"}} </div>
+        <div class="col-md-4 col-xs-4 well">{{userinfo.following + " Following"}}</div>
+        <div class="col-md-4 col-xs-4 well">{{userinfo.public_repos + " Repositories"}}</div>
+    </div>
+</div>
+
+<div class="row panel">
+  <div class="col-md-12">
+    <h2>Repositories</h2>
+    <div class="table-container">
+      <table class="table table-filter">
+        <tbody>
+          <tr ng-repeat="repos in userrepos">
+            <td>
+              <div class="media">
+                <div class="media-body">
+                  
+                  <h4 class="title">
+                    <a href="{{repos.html_url}}">{{repos.name}}</a>
+                    <span class="pull-right pagado">({{repos.default_branch}})</span>
+                  </h4>
+                  <p class="summary">{{repos.description}}</p>
+                </div>
+              </div>
+            </td>
+          </tr>
+          
+
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+

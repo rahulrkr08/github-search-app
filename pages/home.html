@@ -1,0 +1,29 @@
+<div class="App-header">
+  <div class="row">
+    <div class="col-md-3">&nbsp;</div>
+    <div class="col-md-6">
+      <h2>{{title}}</h2>
+      <div class="search">
+        <input type="text" ng-keyup="searchGithubEvent($event)" class="form-control input-sm" maxLength="64" placeholder="Search" />
+        
+      </div>
+    </div>
+    <div class="col-md-3">&nbsp;</div>
+  </div>
+</div>
+<div class="row">
+
+    <div class="col-lg-3 col-sm-6" ng-repeat="value in searchResult">
+    	<a href="#user/{{value.login}}">
+          	<div class="card hovercard">
+              	<div class="cardheader"></div>
+              	<div class="avatar">
+                  	<img alt="" src="{{value.avatar_url}}" />
+              	</div>
+              	<div class="info">
+                  	<div class="desc"><strong>Score</strong>: {{value.score}}</div>                  
+              	</div>
+          	</div>
+      	</a>
+	</div>
+</div>
