@@ -9,7 +9,7 @@
   "repository": "https://github.com/rahulrkr08/github-search-app.git",
   "buildpacks": [
     {
-      "url": "https://github.com/heroku/heroku-buildpack-php"
+      "url": "https://codon-buildpacks.s3.amazonaws.com/buildpacks/heroku/php.tgz"
     }
   ]
 }
